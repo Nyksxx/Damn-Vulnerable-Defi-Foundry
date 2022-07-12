@@ -130,11 +130,7 @@ contract Puppet is Test {
 
         puppetPool.borrow{value: deposit}(POOL_INITIAL_TOKEN_BALANCE);
 
-        uint256 tokensToBuyBack = ATTACKER_INITIAL_TOKEN_BALANCE;
-
-        uint256 ethReq = uniswapExchange.getEthToTokenOutputPrice(tokensToBuyBack); 
-
-        uniswapExchange.getEthToTokenOutputPrice{value : ethReq}(tokensToBuyBack,(block.timestamp * 2));
+        
 
 
         vm.stopPrank();
